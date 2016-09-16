@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @SequenceGenerator(name="seqMusician",sequenceName="SEQ_Musician",allocationSize=1)
@@ -24,6 +26,7 @@ public class Musician {
 	private String genre;
 	
 	@Column(name="DT_DEBUT")
+	@Temporal(TemporalType.DATE)
 	private Calendar debutDate;
 	
 	@Column(name="NM_COUNTRY")
